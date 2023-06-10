@@ -139,4 +139,7 @@ table {
   .characters_container--li {
     padding: 5px; }
 
+li:hover {
+  background-color: purple; }
+
 /*# sourceMappingURL=main.css.map */
