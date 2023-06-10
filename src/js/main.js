@@ -41,9 +41,9 @@ function handleClick (event){
     const id = event.currentTarget._id;
     console.log(id);
 
-const selectedCharacter = listCharactersApi.find((data) => data._id === id);
+const selectedCharacter = listCharactersApi.find((character) => character._id === id);
 
-const indexCharacter = favListCharacter.findIndex((data) => data._id === id); 
+const indexCharacter = favListCharacter.findIndex((character) => character._id === id); 
 
 if(indexCharacter === -1) {
 favListCharacter.push(selectedCharacter);

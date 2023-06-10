@@ -13,20 +13,30 @@
   </head>
 
   <body>
-    <header class="header"></header>
-    <section class="search_section">
-      <input type="text" class="text_input js_text_input" />
-      <input type="submit" class="search_btn js_search_btn" />
+    <header class="header">
+      <img class="header_img" src="./assets/images/img-castillo.jpeg" alt="" />
+    </header>
+
+    <section class="search">
+      <input
+        type="text"
+        class="search_input js_text_input"
+        placeholder="Example: Olu Mel"
+      />
+      <input type="submit" class="search_btn js_search_btn" value="Search" />
     </section>
+
     <main class="characters">
-      <section>
-        <ul class="characters_container js_characters_list"></ul>
+      <section class="characters_fav">
+        <p class="characters_fav--text">Favorites ❤</p>
+        <ul class="characters_fav--container js_characters_fav"></ul>
       </section>
-      <section>
-        <p>❤ Favorites</p>
-        <ul class="characters_favcontainer js_characters_fav"></ul>
+
+      <section class="characters_main">
+        <ul class="characters_main--container js_characters_list"></ul>
       </section>
     </main>
+
     <footer class="footer"></footer>
 
     <script src="./assets/js/main.js"></script>

@@ -1,13 +1,36 @@
-.characters{
-    &_container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    &--li{
-        padding: 5px;
+.characters {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  &_fav {
+    border-right: 1px solid gray;
+    width: 25vh;
+    width: 150px;
+    
+    &--text {
+      width:150px;
+      color: blue;
+
     }
+    &--container{
+        display: flex;
+        flex-direction: column;
+        
     }
+  }
+  &_main {
+   
+    &--container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 5px;
+      box-shadow: 1px;
+      width: 75vh;
+    }
+  }
 }
-li:hover{
-    background-color: purple;
+li:hover {
+  border: 5px solid blue;
 }
