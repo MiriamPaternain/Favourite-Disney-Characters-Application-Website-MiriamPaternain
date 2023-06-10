@@ -132,4 +132,11 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+.characters_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+  .characters_container--li {
+    padding: 5px; }
+
 /*# sourceMappingURL=main.css.map */

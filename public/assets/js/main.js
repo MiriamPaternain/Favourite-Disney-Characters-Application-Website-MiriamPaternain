@@ -19,7 +19,7 @@ function renderCharacterList (listData){
 }
 
 function renderCharacter(data){
-let html = `<li id = "${data._id}" class="js_li">
+let html = `<li id = "${data._id}" class="characters_container--li js_li">
           <img src="${data.imageUrl}" class="img js_li--img" alt=""/>
           <p class="name js_li--name">"${data.name}"</p>
         </li>`;
