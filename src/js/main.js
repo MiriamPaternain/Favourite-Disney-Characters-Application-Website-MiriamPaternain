@@ -1,8 +1,10 @@
 'use strict';
 
-const charactersList = document.querySelector('.js_characters_list');
+const ulCharactersList = document.querySelector('.js_characters_list');
+const ulFavCharactersList = document.querySelector('.js_characters_fav');
 
 let listCharactersApi = [];
+let favListCharacter = [];
 
 fetch('https://api.disneyapi.dev/character')
 .then((response)=> response.json())
@@ -14,7 +16,7 @@ fetch('https://api.disneyapi.dev/character')
 
 function renderCharacterList (listData){
     for(const eachCharacter of listData){
-        charactersList.innerHTML += renderCharacter(eachCharacter);
+        ulCharactersList.innerHTML += renderCharacter(eachCharacter);
     }
     addEventCharacter();
 }
@@ -36,6 +38,24 @@ let html = `<li id = "${data._id}" class="characters_container--li js_li">
 }
 
 function handleClick (event){
-    const id = event.currentTarget.id;
+    const id = event.currentTarget._id;
     console.log(id);
+
+const selectedCharacter = listCharactersApi.find((data) => data._id === id);
+
+const indexCharacter = favListCharacter.findIndex((data) => data._id === id); 
+
+if(indexCharacter === -1) {
+favListCharacter.push(selectedCharacter);
+} else {
+    favListCharacter.splice(indexCharacter, 1);
+    console.log(favListCharacter);
+}
+renderFavListCharacter();
+}
+
+function renderFavListCharacter(){
+    for(const eachFavCharacter of favListCharacter){
+        ulFavCharactersList.innerHTML += renderCharacter(eachFavCharacter)
+    }
 }
