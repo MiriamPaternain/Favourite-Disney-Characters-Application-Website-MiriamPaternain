@@ -1,1 +1,1 @@
-# Ejercicio de Adalab
+# Evaluación final módulo 2 Adalab - JavaScript

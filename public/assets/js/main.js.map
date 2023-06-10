@@ -1,1 +1,1 @@
-{"version":3,"sources":["main.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA","file":"main.js","sourcesContent":["'use strict';\n\nconsole.log('>> Ready :)');\n"]}
+{"version":3,"sources":["main.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"main.js","sourcesContent":["'use strict';\n\nconst characterList = document.querySelector('js_characters_list');\n\nfetch('https://api.disneyapi.dev/character')\n.then((response)=> response.json())\n.then((data) => {\n    console.log(data);\n});"]}
