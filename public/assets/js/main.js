@@ -30,6 +30,7 @@ function addEventCharacter(){
 
 
 function renderCharacter(data){
+
 let html = `<li id = "${data._id}" class="characters_container--li js_li">
           <img src="${data.imageUrl}"/>
           <p class="name js_li--name">"${data.name}"</p>
@@ -38,23 +39,20 @@ let html = `<li id = "${data._id}" class="characters_container--li js_li">
 }
 
 function handleClick (event){
-    const id = event.currentTarget._id;
-    console.log(id);
-
-const selectedCharacter = listCharactersApi.find((character) => character._id === id);
-
-const indexCharacter = favListCharacter.findIndex((character) => character._id === id); 
+    const id = event.currentTarget._id;  //para clickar en cualquier parte del elemento
+const selectedCharacter = listCharactersApi.find((data) => data.id === id);
+const indexCharacter = favListCharacter.findIndex((data) => data.id === id); 
 
 if(indexCharacter === -1) {
 favListCharacter.push(selectedCharacter);
 } else {
     favListCharacter.splice(indexCharacter, 1);
-    console.log(favListCharacter);
 }
 renderFavListCharacter();
 }
 
 function renderFavListCharacter(){
+    ulFavCharactersList.innerHTML = '';  //para limpiar la lista antes de renderizar los nuevos
     for(const eachFavCharacter of favListCharacter){
         ulFavCharactersList.innerHTML += renderCharacter(eachFavCharacter)
     }
