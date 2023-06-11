@@ -133,7 +133,8 @@ table {
   border-spacing: 0; }
 
 .header_img {
-  width: 100%; }
+  width: 100vw;
+  height: 20vh; }
 
 .search {
   background-color: white;
@@ -159,6 +160,7 @@ table {
 
 .characters {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   gap: 10px; }
