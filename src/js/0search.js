@@ -1,5 +1,5 @@
 'use strict';
-const inputSearch = document.querySelector('.js_text_input');
+/* const inputSearch = document.querySelector('.js_text_input');
 const btnSearch = document.querySelector('.js_search_btn');
 
 const handleClickBtn = (event) => {
@@ -10,4 +10,5 @@ const handleClickBtn = (event) => {
     renderCharacterList(filterApiList);
 }
 
-btnSearch.addEventListener('click', handleClickBtn);
+btnSearch.addEventListener('click', handleClickBtn); */
+

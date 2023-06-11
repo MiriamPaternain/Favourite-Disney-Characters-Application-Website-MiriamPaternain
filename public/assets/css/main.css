@@ -165,13 +165,14 @@ table {
   justify-content: center;
   gap: 10px; }
   .characters_fav {
-    border-right: 1px solid gray;
-    width: 25vh;
-    width: 150px; }
+    border-right: 1px solid blue;
+    width: 250px; }
     .characters_fav--text {
-      width: 150px;
-      color: blue; }
+      width: 200px;
+      color: blue;
+      margin-bottom: 30px; }
     .characters_fav--container {
+      width: 300px;
       display: flex;
       flex-direction: column; }
   .characters_main--container {
@@ -181,6 +182,11 @@ table {
     gap: 5px;
     box-shadow: 1px;
     width: 75vh; }
+  .characters_main--li {
+    width: 210px; }
+  .characters_main--text {
+    color: blue;
+    margin-bottom: 30px; }
 
 li:hover {
   border: 5px solid blue; }

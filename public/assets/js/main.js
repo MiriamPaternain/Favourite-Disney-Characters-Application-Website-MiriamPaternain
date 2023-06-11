@@ -1,4 +1,19 @@
 'use strict';
+/* const inputSearch = document.querySelector('.js_text_input');
+const btnSearch = document.querySelector('.js_search_btn');
+
+const handleClickBtn = (event) => {
+    event.preventDefault();
+    const valueSearch = inputSearch.value;
+    const filterApiList = listCharactersApi.filter((character) =>
+    character.name.toLowerCase().includes(valueSearch.toLowerCase()));
+    renderCharacterList(filterApiList);
+}
+
+btnSearch.addEventListener('click', handleClickBtn); */
+
+
+'use strict';
 
 const ulCharactersList = document.querySelector('.js_characters_list');
 const ulFavCharactersList = document.querySelector('.js_characters_fav');
@@ -31,17 +46,17 @@ function addEventCharacter(){
 
 function renderCharacter(data){
 
-let html = `<li id = "${data._id}" class="characters_container--li js_li">
-          <img src="${data.imageUrl}"/>
-          <p class="name js_li--name">"${data.name}"</p>
+let html = `<li id = ${data._id} class="characters_main--li js_li">
+          <img src=${data.imageUrl}/>
+          <p class="name js_li--name">${data.name}</p>
         </li>`;
         return html;
 }
 
 function handleClick (event){
-    const id = event.currentTarget._id;  //para clickar en cualquier parte del elemento
-const selectedCharacter = listCharactersApi.find((data) => data.id === id);
-const indexCharacter = favListCharacter.findIndex((data) => data.id === id); 
+    const id = parseInt(event.currentTarget.id);  //para clickar en cualquier parte del elemento
+const selectedCharacter = listCharactersApi.find((data) => data._id === id);
+const indexCharacter = favListCharacter.findIndex((data) => data._id === id); 
 
 if(indexCharacter === -1) {
 favListCharacter.push(selectedCharacter);
@@ -57,17 +72,6 @@ function renderFavListCharacter(){
         ulFavCharactersList.innerHTML += renderCharacter(eachFavCharacter)
     }
 }
-'use strict';
-const inputSearch = document.querySelector('.js_text_input');
-const btnSearch = document.querySelector('.js_search_btn');
 
-const handleClickBtn = (event) => {
-    event.preventDefault();
-    const valueSearch = inputSearch.value;
-    const filterApiList = listCharactersApi.filter((character) =>
-    character.name.toLowerCase().includes(valueSearch.toLowerCase()));
-    renderCharacterList(filterApiList);
-}
 
-btnSearch.addEventListener('click', handleClickBtn);
 //# sourceMappingURL=main.js.map

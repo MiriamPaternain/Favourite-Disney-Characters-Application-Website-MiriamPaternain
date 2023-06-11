@@ -5,16 +5,18 @@
   justify-content: center;
   gap: 10px;
   &_fav {
-    border-right: 1px solid gray;
-    width: 25vh;
-    width: 150px;
+    border-right: 1px solid blue;
+ 
+    width: 250px;
     
     &--text {
-      width:150px;
+      width:200px;
       color: blue;
+      margin-bottom: 30px;
 
     }
     &--container{
+      width: 300px;
         display: flex;
         flex-direction: column;
         
@@ -29,6 +31,13 @@
       gap: 5px;
       box-shadow: 1px;
       width: 75vh;
+    }
+    &--li{
+      width: 210px;
+    }
+    &--text{
+      color: blue;
+      margin-bottom: 30px;
     }
   }
 }
