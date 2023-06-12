@@ -212,6 +212,10 @@ li:hover {
 .resetbtn:hover {
   border: 2px solid blue; }
 
+.remove-btn {
+  display: flex;
+  justify-content: center; }
+
 .footer {
   width: 100%;
   height: 25px;
