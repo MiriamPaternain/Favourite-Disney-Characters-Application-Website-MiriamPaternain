@@ -23,11 +23,8 @@ function openPage(){
         });
     }
 
-
-
-
-
 function renderCharacterList (listData){
+    ulCharactersList.innerHTML = '';
     for(const eachCharacter of listData){
         ulCharactersList.innerHTML += renderCharacter(eachCharacter);
     }
