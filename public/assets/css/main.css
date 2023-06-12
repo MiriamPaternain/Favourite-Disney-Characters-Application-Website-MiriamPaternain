@@ -163,11 +163,15 @@ table {
 
 .characters {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   gap: 10px; }
   .characters_fav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     border-right: 1px solid blue;
     width: 250px; }
     .characters_fav--text {
@@ -175,9 +179,7 @@ table {
       color: blue;
       margin-bottom: 30px; }
     .characters_fav--container {
-      width: 300px;
-      display: flex;
-      flex-direction: column; }
+      width: 300px; }
   .characters_main--container {
     display: flex;
     flex-direction: row;
@@ -193,6 +195,22 @@ table {
 
 li:hover {
   border: 5px solid blue; }
+
+.resetbtn {
+  width: 40px;
+  height: 80px;
+  display: flex;
+  border-radius: 5px;
+  border: 1px solid grey;
+  justify-content: center;
+  margin-top: 30px;
+  margin-left: -60px; }
+  .resetbtn_bin {
+    width: 30px;
+    margin-top: 20px; }
+
+.resetbtn:hover {
+  border: 2px solid blue; }
 
 .footer {
   width: 100%;
