@@ -71,6 +71,7 @@ function renderFavListCharacter() {
   for (const eachFavCharacter of favListCharacter) {
     ulFavCharactersList.innerHTML += renderFavCharacter(eachFavCharacter);
   }
+  addEventRemoveFavItem();
 }
 
 function renderFavCharacter(data) {

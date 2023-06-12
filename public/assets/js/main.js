@@ -15,6 +15,27 @@ const handleClickBtn = (event) => {
 btnSearch.addEventListener('click', handleClickBtn);
 
 
+function addEventRemoveFavItem() {
+  const removeItemBtn = document.querySelectorAll('.js_li--removeBtn');
+
+  for (const eachRemoveItemBtn of removeItemBtn) {
+    eachRemoveItemBtn.addEventListener('click', handleClickRemoveFavItemBtn);
+  }
+}
+
+function handleClickRemoveFavItemBtn (event) {
+  const id = parseInt(event.currentTarget.parentElement.id);
+  const indexCharacter = favListCharacter.findIndex((data) => data._id === id);
+  if (indexCharacter !== -1) {
+    favListCharacter.splice(indexCharacter, 1);
+  }
+  localStorage.setItem(
+    'localStorageFavCharacters',
+    JSON.stringify(favListCharacter)
+  );
+  renderFavListCharacter();
+};
+
 'use strict';
 
 const ulCharactersList = document.querySelector('.js_characters_list');
@@ -88,6 +109,7 @@ function renderFavListCharacter() {
   for (const eachFavCharacter of favListCharacter) {
     ulFavCharactersList.innerHTML += renderFavCharacter(eachFavCharacter);
   }
+  addEventRemoveFavItem();
 }
 
 function renderFavCharacter(data) {
@@ -99,17 +121,6 @@ function renderFavCharacter(data) {
   return html;
 }
 
-const removeItmBtn = document.querySelector('.js_li--removeBtn');
-
-const handleClickRemoveFavItemBtn = (event) => {
-    const id = parseInt(event.currentTarget.id); 
-    const indexCharacter = favListCharacter.findIndex((data) => data._id === id); 
-    if(indexCharacter !== -1){
-   favListCharacter.splice(indexCharacter, 1);}
-   localStorage.setItem('localStorageFavCharacters', JSON.stringify(favListCharacter));
-  renderFavListCharacter();
-}
-removeItmBtn.addEventListener('click', handleClickRemoveFavItemBtn);
 'use strict';
 
 const resetFavBtn = document.querySelector('.resetbtn');
