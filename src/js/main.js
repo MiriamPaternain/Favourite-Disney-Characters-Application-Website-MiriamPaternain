@@ -6,13 +6,26 @@ const ulFavCharactersList = document.querySelector('.js_characters_fav');
 let listCharactersApi = [];
 let favListCharacter = [];
 
-fetch('https://api.disneyapi.dev/character')
-.then((response)=> response.json())
-.then((data) => {
-    console.log(data);
-    listCharactersApi = data.data;
-    renderCharacterList(listCharactersApi);
-});
+const favCharacterLocalStorage = JSON.parse (localStorage.getItem("localStorageFavCharacters"));
+
+openPage();
+function openPage(){
+    if(favCharacterLocalStorage){
+        favListCharacter = favCharacterLocalStorage;
+        renderFavListCharacter(favListCharacter);
+    }
+        fetch('https://api.disneyapi.dev/character')
+        .then((response)=> response.json())
+        .then((data) => {
+            console.log(data);
+            listCharactersApi = data.data;
+            renderCharacterList(listCharactersApi);
+        });
+    }
+
+
+
+
 
 function renderCharacterList (listData){
     for(const eachCharacter of listData){
@@ -39,7 +52,8 @@ let html = `<li id = ${data._id} class="characters_main--li js_li">
 }
 
 function handleClick (event){
-    const id = parseInt(event.currentTarget.id);  //para clickar en cualquier parte del elemento
+    const id = parseInt(event.currentTarget.id); 
+    console.log(id); //para clickar en cualquier parte del elemento
 const selectedCharacter = listCharactersApi.find((data) => data._id === id);
 const indexCharacter = favListCharacter.findIndex((data) => data._id === id); 
 
@@ -48,6 +62,7 @@ favListCharacter.push(selectedCharacter);
 } else {
     favListCharacter.splice(indexCharacter, 1);
 }
+ localStorage.setItem("localStorageFavCharacters", JSON.stringify(favListCharacter));
 renderFavListCharacter();
 }
 
