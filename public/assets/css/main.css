@@ -132,9 +132,12 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-.header_img {
-  width: 100vw;
-  height: 20vh; }
+.header {
+  width: 100%;
+  height: 45vh;
+  background-image: url(../images/img-castillo.jpeg);
+  background-position: center;
+  background-repeat: no-repeat; }
 
 .search {
   background-color: white;
@@ -190,5 +193,19 @@ table {
 
 li:hover {
   border: 5px solid blue; }
+
+.footer {
+  width: 100%;
+  height: 25px;
+  position: fixed;
+  bottom: 0;
+  background-color: blue; }
+  .footer_text {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 6px;
+    font-size: 12px; }
 
 /*# sourceMappingURL=main.css.map */
