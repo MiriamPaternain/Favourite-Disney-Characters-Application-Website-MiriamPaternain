@@ -43,7 +43,7 @@ function addEventCharacter() {
 function renderCharacter(data) {
 
   let html = `<li id = ${data._id} class="characters_main--li js_li">
-          <img src=${data.imageUrl}/>
+          <img src=${data.imageUrl} class="characters_main--img"/>
           <p class="name js_li--name">${data.name}</p>
         </li>`;
   return html;
@@ -57,6 +57,7 @@ function handleClick(event) {
 
   if (indexCharacter === -1) {
     favListCharacter.push(selectedCharacter);
+    event.currentTarget.classList.add('favColor');
   } else {
     favListCharacter.splice(indexCharacter, 1);
   }
@@ -77,7 +78,7 @@ function renderFavListCharacter() {
 
 function renderFavCharacter(data) {
   let html = `<li id=${data._id} class="characters_main--li js_li">
-          <img src=${data.imageUrl}/>
+          <img src=${data.imageUrl} class="characters_main--img"/>
           <p class="name js_li--name">${data.name}</p>
           <button class="remove-btn js_li--removeBtn">x</button>
         </li>`;

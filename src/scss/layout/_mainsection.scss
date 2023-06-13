@@ -51,6 +51,9 @@
       display: flex;
       justify-content: center;
     }
+    &--img{
+
+    }
   }
 }
 li:hover {
@@ -83,4 +86,8 @@ li:hover {
 
 .highliht{
   border: 2px solid blue;
+}
+
+.favColor{
+  background-color: lightseagreen;
 }

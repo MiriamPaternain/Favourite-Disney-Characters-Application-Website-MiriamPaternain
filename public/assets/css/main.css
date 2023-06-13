@@ -136,6 +136,7 @@ table {
   width: 100%;
   height: 45vh;
   background-image: url(../images/img-castillo.jpeg);
+  background-size: 100vw;
   background-position: center;
   background-repeat: no-repeat; }
 
@@ -230,6 +231,9 @@ li:hover {
 
 .highliht {
   border: 2px solid blue; }
+
+.favColor {
+  background-color: lightseagreen; }
 
 .footer {
   width: 100%;
