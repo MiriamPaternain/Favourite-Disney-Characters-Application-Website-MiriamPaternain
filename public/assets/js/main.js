@@ -23,7 +23,7 @@ function handleClickRemoveFavItemBtn (event) {
 
 const ulCharactersList = document.querySelector('.js_characters_list');
 const ulFavCharactersList = document.querySelector('.js_characters_fav');
-
+const favContainer = document.querySelector('.js_hidden');
 let listCharactersApi = [];
 let favListCharacter = [];
 
@@ -62,7 +62,6 @@ function addEventCharacter() {
 }
 
 function renderCharacter(data) {
-
   let html = `<li id = ${data._id} class="characters_main--li js_li">
           <img src=${data.imageUrl} class="characters_main--img"/>
           <p class="name js_li--name">${data.name}</p>
@@ -79,6 +78,7 @@ function handleClick(event) {
   if (indexCharacter === -1) {
     favListCharacter.push(selectedCharacter);
     event.currentTarget.classList.add('favColor');
+    favContainer.classList.remove('js_hidden');
   } else {
     favListCharacter.splice(indexCharacter, 1);
   }

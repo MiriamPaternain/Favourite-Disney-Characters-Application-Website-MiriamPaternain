@@ -235,6 +235,9 @@ li:hover {
 .favColor {
   background-color: lightseagreen; }
 
+.js_hidden {
+  display: none; }
+
 .footer {
   width: 100%;
   height: 25px;
