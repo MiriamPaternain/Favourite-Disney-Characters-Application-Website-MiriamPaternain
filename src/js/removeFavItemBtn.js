@@ -12,9 +12,6 @@ function handleClickRemoveFavItemBtn (event) {
   if (indexCharacter !== -1) {
     favListCharacter.splice(indexCharacter, 1);
   }
-  localStorage.setItem(
-    'localStorageFavCharacters',
-    JSON.stringify(favListCharacter)
-  );
+  localStorage.setItem('localStorageFavCharacters', JSON.stringify(favListCharacter));
   renderFavListCharacter();
 };
