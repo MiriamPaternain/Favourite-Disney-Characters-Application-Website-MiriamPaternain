@@ -1,20 +1,3 @@
-'use strict';
-const inputSearch = document.querySelector('.js_text_input');
-const btnSearch = document.querySelector('.js_search_btn');
-
-const handleClickBtn = (event) => {
-    event.preventDefault();
-    const valueSearch = inputSearch.value;
-    console.log(valueSearch);
-    const filterApiList = listCharactersApi.filter((character) =>
-    character.name.toLowerCase().includes(valueSearch.toLowerCase()));
-    console.log(filterApiList);
-    renderCharacterList(filterApiList);
-}
-
-btnSearch.addEventListener('click', handleClickBtn);
-
-
 function addEventRemoveFavItem() {
   const removeItemBtn = document.querySelectorAll('.js_li--removeBtn');
 
@@ -79,6 +62,7 @@ function addEventCharacter() {
 }
 
 function renderCharacter(data) {
+
   let html = `<li id = ${data._id} class="characters_main--li js_li">
           <img src=${data.imageUrl}/>
           <p class="name js_li--name">${data.name}</p>
@@ -132,4 +116,21 @@ const handleClickResetBtn = (event) => {
 }
 
 resetFavBtn.addEventListener('click', handleClickResetBtn);
+'use strict';
+const inputSearch = document.querySelector('.js_text_input');
+const btnSearch = document.querySelector('.js_search_btn');
+
+const handleClickBtn = (event) => {
+    event.preventDefault();
+    const valueSearch = inputSearch.value;
+    console.log(valueSearch);
+    const filterApiList = listCharactersApi.filter((character) =>
+    character.name.toLowerCase().includes(valueSearch.toLowerCase()));
+    console.log(filterApiList);
+    renderCharacterList(filterApiList);
+}
+
+btnSearch.addEventListener('click', handleClickBtn);
+
+
 //# sourceMappingURL=main.js.map

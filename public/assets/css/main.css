@@ -149,7 +149,7 @@ table {
   margin: auto;
   gap: 5px;
   transform: translateY(-30px);
-  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2); }
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2); }
   .search_input {
     width: 400px;
     height: 30px;
@@ -165,56 +165,71 @@ table {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  gap: 10px; }
+  justify-content: center; }
   .characters_fav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-right: 1px solid blue;
-    width: 250px; }
+    border-right: 1px solid blue; }
     .characters_fav--text {
-      width: 200px;
+      width: 300px;
       color: blue;
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      text-transform: uppercase; }
     .characters_fav--container {
-      width: 300px; }
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
   .characters_main--container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 5px;
-    box-shadow: 1px;
-    width: 75vh; }
+    justify-content: center;
+    gap: 10px;
+    width: 80vh; }
   .characters_main--li {
-    width: 210px; }
+    width: 200px;
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column-reverse; }
   .characters_main--text {
     color: blue;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center; }
 
 li:hover {
-  border: 5px solid blue; }
+  box-shadow: 0px 0px 5px 3px blue; }
 
 .resetbtn {
   width: 40px;
-  height: 80px;
+  height: 50px;
   display: flex;
   border-radius: 5px;
   border: 1px solid grey;
-  justify-content: center;
   margin-top: 30px;
   margin-left: -60px; }
   .resetbtn_bin {
-    width: 30px;
-    margin-top: 20px; }
+    width: 25px;
+    margin-top: 10px; }
 
 .resetbtn:hover {
   border: 2px solid blue; }
 
 .remove-btn {
-  display: flex;
-  justify-content: center; }
+  width: 30px;
+  /*  display: flex;
+  justify-content: center; */ }
+
+.highliht {
+  border: 2px solid blue; }
 
 .footer {
   width: 100%;

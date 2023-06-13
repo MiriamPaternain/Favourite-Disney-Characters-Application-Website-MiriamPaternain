@@ -41,6 +41,7 @@ function addEventCharacter() {
 }
 
 function renderCharacter(data) {
+
   let html = `<li id = ${data._id} class="characters_main--li js_li">
           <img src=${data.imageUrl}/>
           <p class="name js_li--name">${data.name}</p>
