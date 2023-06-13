@@ -60,6 +60,7 @@ function handleClick(event) {
     favContainer.classList.remove('js_hidden');
   } else {
     favListCharacter.splice(indexCharacter, 1);
+    event.currentTarget.classList.remove('favColor');
   }
   localStorage.setItem(
     'localStorageFavCharacters',
