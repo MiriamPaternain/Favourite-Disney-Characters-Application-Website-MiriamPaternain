@@ -111,11 +111,13 @@ function renderFavCharacter(data) {
 const resetFavBtn = document.querySelector('.resetbtn');
 
 const handleClickResetBtn = (event) => {
-    //const allLiElements = document.querySelectorAll('.js_li');
+    
     localStorage.removeItem('localStorageFavCharacters');
     favListCharacter = [];
     favContainer.classList.add('js_hidden');
-    //allLiElements.classList.remove('.favColor');
+    const allLiElements = document.querySelectorAll('.favColor');
+    for(const eachLi of allLiElements){
+    eachLi.classList.remove('favColor')};
     renderFavListCharacter();
 }
 
