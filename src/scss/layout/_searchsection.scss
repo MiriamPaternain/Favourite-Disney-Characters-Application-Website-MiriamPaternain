@@ -12,13 +12,18 @@
   &_input {
     width: 400px;
     height: 30px;
-    border: 1px solid blue;
+    border: 1px solid #5e5375;
   }
   &_btn {
-    background-color: blue;
+    background-color: #5e5375;
     color: white;
     width: 150px;
     height: 30px;
     border: none;
   }
+}
+.search_btn:hover{
+  color: white;
+  background-color: #716296;
+  border: 1px solid #5e5375;
 }
