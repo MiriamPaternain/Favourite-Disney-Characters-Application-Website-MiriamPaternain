@@ -1,6 +1,7 @@
 'use strict';
 const inputSearch = document.querySelector('.js_text_input');
 const btnSearch = document.querySelector('.js_search_btn');
+const btnLog = document.querySelector('.js_logBtn');
 
 const handleClickBtn = (event) => {
     event.preventDefault();
@@ -14,3 +15,11 @@ const handleClickBtn = (event) => {
 
 btnSearch.addEventListener('click', handleClickBtn);
 
+const handleClickLog = (ev) => {
+    for( const eachFavName of favListCharacter){
+console.log(eachFavName.name);
+    }
+    
+}
+
+btnLog.addEventListener('click', handleClickLog);

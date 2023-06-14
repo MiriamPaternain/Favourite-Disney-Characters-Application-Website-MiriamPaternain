@@ -44,9 +44,14 @@ function renderCharacter(data) {
   let html = `<li id = ${data._id} class="characters_main--li js_li">
           <img src=${data.imageUrl} class="characters_main--img"/>
           <p class="name js_li--name">${data.name}</p>
+          <p>Núm series ${data.tvShows.length}</p>
         </li>`;
   return html;
 }
+
+/* function text {
+
+} */
 
 function handleClick(event) {
   const id = parseInt(event.currentTarget.id);
@@ -123,6 +128,7 @@ resetFavBtn.addEventListener('click', handleClickResetBtn);
 'use strict';
 const inputSearch = document.querySelector('.js_text_input');
 const btnSearch = document.querySelector('.js_search_btn');
+const btnLog = document.querySelector('.js_logBtn');
 
 const handleClickBtn = (event) => {
     event.preventDefault();
@@ -136,5 +142,12 @@ const handleClickBtn = (event) => {
 
 btnSearch.addEventListener('click', handleClickBtn);
 
+const handleClickLog = (ev) => {
+    for( const eachFavName of favListCharacter){
+console.log(eachFavName.name);
+    }
+    
+}
 
+btnLog.addEventListener('click', handleClickLog);
 //# sourceMappingURL=main.js.map
