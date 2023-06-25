@@ -42,7 +42,7 @@ function addEventCharacter() {
 
 function renderCharacter(data) {
   let html = `<li id = ${data._id} class="characters_main--li js_li">
-          <img src=${data.imageUrl} class="characters_main--img"/>
+          <div class="characters_main--imgContainer"><img src=${data.imageUrl} class="characters_main--img"/></div>
           <p class="name js_li--name">${data.name}</p>
           <p>Núm series ${data.tvShows.length}</p>
         </li>`;
@@ -142,12 +142,12 @@ const handleClickBtn = (event) => {
 
 btnSearch.addEventListener('click', handleClickBtn);
 
-const handleClickLog = (ev) => {
+/* const handleClickLog = (ev) => {
     for( const eachFavName of favListCharacter){
 console.log(eachFavName.name);
     }
     
 }
 
-btnLog.addEventListener('click', handleClickLog);
+btnLog.addEventListener('click', handleClickLog); */
 //# sourceMappingURL=main.js.map

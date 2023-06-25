@@ -15,11 +15,11 @@ const handleClickBtn = (event) => {
 
 btnSearch.addEventListener('click', handleClickBtn);
 
-const handleClickLog = (ev) => {
+/* const handleClickLog = (ev) => {
     for( const eachFavName of favListCharacter){
 console.log(eachFavName.name);
     }
     
 }
 
-btnLog.addEventListener('click', handleClickLog);
+btnLog.addEventListener('click', handleClickLog); */
