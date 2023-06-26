@@ -87,9 +87,9 @@ function renderFavCharacter(data) {
           <div class="characters_fav--img-container">
             <img src=${data.imageUrl} class="characters_fav--img"/>
           </div>
-          <p class="name js_li--name">${data.name}</p>
-          <button class="remove-btn js_li--removeBtn">x</button>
-        </li>`;
+          <p class="characters_fav--name js_li--name">${data.name}</p>
+        </li>
+        <div class="remove-btn-container"><button class="remove-btn js_li--removeBtn">x</button></div>`;
   return html;
 }
 
